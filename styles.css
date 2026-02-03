@@ -1,0 +1,143 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+html {
+  font-size: 18px;
+  font-family: 'Outfit', sans-serif;
+}
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* 9. Improve line wrapping */
+p, span {
+  font-weight: 400;
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+:root {
+  --blue-500: hsl(215, 51%, 70%);
+  --cyan-400: hsl(178, 100%, 50%);
+  --blue-950: hsl(217, 54%, 11%);
+  --blue-900: hsl(216, 50%, 16%);
+  --blue-800: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+main {
+  align-items: center;
+  background-color: var(--blue-950);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 1.333rem;
+  width: 100%;
+}
+
+.nft__article {
+  background-color: var(--blue-900);
+  border-radius: 0.5rem;
+  color: var(--blue-500);
+  font-size: 0.889rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 360px;
+  padding: 1.333rem;
+}
+
+.nft__header-figure {
+  border-radius: 0.5rem;
+}
+
+.nft__header-image {
+  border-radius: inherit;
+}
+
+.nft__headline {
+  color: var(--white);
+  font-size: 1.333rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.nft__copy {
+  font-weight: 300;
+}
+
+.nft__badge-container {
+  border-bottom: 1px solid var(--blue-800);
+  display: flex;
+  padding-block-end: 1rem;
+  width: 100%;
+}
+
+.nft__badge-crypto {
+  color: var(--cyan-400);
+}
+
+.nft__badge-crypto-wrapper, .nft__badge-time-wrapper {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.nft__badge-time-wrapper {
+  justify-content: flex-end;
+}
+
+.nft__badge-crypto-icon, .nft__badge-time-icon {
+  height: 100%;
+  max-height: 1rem;
+  width: auto;
+}
+
+.nft__creator {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.nft__creator-avatar {
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  height: 100%;
+  max-height: 1.5rem;
+  width: auto;
+}
+
+.nft__creator-name .bold {
+  color: var(--white);
+}

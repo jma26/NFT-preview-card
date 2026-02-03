@@ -8,12 +8,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
   <title>Frontend Mentor | NFT preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution { background-color: hsl(217, 54%, 11%); color: hsl(0, 0%, 100%); font-size: 11px; margin-block-start: 2rem; text-align: center; }
+    .attribution a { color: hsl(0, 0%, 100%); }
   </style>
 </head>
 <body>
@@ -23,22 +24,28 @@
         <figure class="nft__header-figure">
           <img class="nft__header-image" src="./images/image-equilibrium.jpg" alt="Equilibrium NFT">
         </figure>
-        <h2 class="nft__headline">Equilibrium #3429</h2>
-        <p class="nft__copy">Our Equilibrium collection promotes balance and calm.</p>
-        <div class="nft__badge-container">
-          <p class="nft__badge-crypto">0.041 ETH</p>
-          <p class="nft__badge-duration">3 days left</p>
-        </div>
-        <div class="nft__creator">
-          <img class="nft__creator-avatar" src="./images/image-avatar.png" alt="Jules Wyvern">
-          <p class="nft__creator-name">Creation of <span class="bold">Jules Wyvern</span></p>
-        </div>
       </header>
+      <h2 class="nft__headline">Equilibrium #3429</h2>
+      <p class="nft__copy">Our Equilibrium collection promotes balance and calm.</p>
+      <div class="nft__badge-container">
+        <div class="nft__badge-crypto-wrapper">
+          <img class="nft__badge-crypto-icon" src="./images/icon-ethereum.svg" alt="">
+          <p class="nft__badge-crypto">0.041 ETH</p>
+        </div>
+        <div class="nft__badge-time-wrapper">
+          <img class="nft__badge-time-icon" src="./images/icon-clock.svg" alt="">
+          <p class="nft__badge-time">3 days left</p>
+        </div>
+      </div>
+      <div class="nft__creator">
+        <img class="nft__creator-avatar" src="./images/image-avatar.png" alt="Jules Wyvern">
+        <p class="nft__creator-name">Creation of <span class="bold">Jules Wyvern</span></p>
+      </div>
     </article>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/jma26" target="_blank">Jesse Ma</a>.
+    </div>
   </main>
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
 </body>
 </html>
