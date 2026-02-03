@@ -78,17 +78,49 @@ main {
 
 .nft__header-figure {
   border-radius: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  &:active, &:focus, &:hover .nft__header-overlay-wrapper {
+    border-radius: inherit;
+    background-color: hsla(178, 100%, 50%, 70%);
+    opacity: 1;
+  }
 }
 
 .nft__header-image {
   border-radius: inherit;
 }
 
+.nft__header-overlay-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+.nft__header-overlay-icon {
+  z-index: 10;
+}
+
 .nft__headline {
   color: var(--white);
+  cursor: pointer;
   font-size: 1.333rem;
   font-weight: 600;
   line-height: 1.5;
+  &:active, 
+  &:focus, 
+  &:hover {
+    color: var(--cyan-400);
+  }
 }
 
 .nft__copy {
@@ -140,4 +172,8 @@ main {
 
 .nft__creator-name .bold {
   color: var(--white);
+  cursor: pointer;
+  &:active, &:focus, &:hover {
+    color: var(--cyan-400);
+  }
 }
